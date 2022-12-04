@@ -1,0 +1,12 @@
+name: My workflow 
+on: [push,pull_request]
+jobs:
+  build:
+    runs_on: ubuntu-latest
+    steps: 
+      -user: action/checkout@v2
+      -name: find and replace 
+      user: nguyenvanuyn96/str-find-and-replace-action@master
+      with:
+        find: "gives you the styling and scffolding"
+        replace: "wow" 
